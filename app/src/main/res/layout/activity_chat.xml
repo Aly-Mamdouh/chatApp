@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverly">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatLayout_tb"
+            android:background="@color/design_default_color_primary_dark"
+            app:titleTextColor="@color/white"
+            android:theme="@style/ToolBarColoredBackArrow"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textSize="26sp"
+                    android:textColor="@color/white"
+                    android:text="Ali Mamdouh"
+                    android:id="@+id/chatLayout_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/chatLayout_iv"/>
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:id="@+id/chatLayout_linLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/chatLayout_preview"
+            android:visibility="gone"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+        <LinearLayout
+            android:weightSum="10"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+          <ImageView
+              android:layout_gravity="center_vertical"
+              android:src="@drawable/ic_baseline_camera_alt_24"
+              android:id="@+id/chatLayout_iv_camera"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_baseline_image_24"
+                android:id="@+id/chatLayout_iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:hint="Your Massage"
+                android:id="@+id/chatLayout_ed_chat"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:src="@drawable/ic_baseline_send_24"
+                android:id="@+id/chatLayout_iv_send"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatLayout_rv"
+        android:padding="8dp"
+        android:layout_below="@id/chatLayout_tb"
+        android:layout_above="@id/chatLayout_linLayout"
+        android:layout_marginTop="50dp"
+        app:stackFromEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_View="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_View:cardBackgroundColor="@color/white"
+    card_View:cardCornerRadius="8dp"
+    card_View:cardElevation="8dp">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="8dp">
+
+       <ImageView
+           android:layout_centerVertical="true"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:id="@+id/layoutPeople_iv"
+
+           />
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_toRightOf="@id/layoutPeople_iv"
+           android:layout_marginLeft="8dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <TextView
+               android:id="@+id/layoutPeople_tv_name"
+               android:text="Ali Mamdouh"
+               android:textSize="22dp"
+               android:textStyle="bold"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               />
+
+           <TextView
+               android:id="@+id/layoutPeople_tv_bio"
+               android:text="Don't Give Up ,Allah With Me"
+               android:textSize="16dp"
+               android:textStyle="bold"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               />
+
+       </LinearLayout>
+
+   </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
